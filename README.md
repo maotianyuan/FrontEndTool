@@ -1,7 +1,7 @@
 # FrontEndTool
 
 ### plugin
-- [随笔记](/plugin/随笔记.md)
+- [随便记](/plugin/随便记.md)
 
 
 ### other
