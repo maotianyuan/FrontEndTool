@@ -220,6 +220,10 @@ git revert HEAD^
 - ssh-keygen -t rsa -C '邮箱'
 - mac : open ~/.ssh
 
+#### 查看自己的用户名和邮箱地址
+- git config user.name
+- git config user.email
+
 ##### 解除关联
 git remote add origin 
 git remote rm origin
