@@ -51,6 +51,9 @@ git branch -d feature1
 git branch -D feature1
 删除远端分支
 git push origin --delete feature/report
+
+// github 删除分支
+git push origin :[branch name]
 ```
 
 ### 三、push本质
