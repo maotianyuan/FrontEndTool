@@ -210,7 +210,7 @@ downPDF() {
     - 看服务器配置
 
 >依然有坑，看puppeteer 使用，坑大致为：
-puppeteer需要安装google-chrome，然被墙；服务器上无法安装，如何使用；前提你公司使用node，可掘金搜索相关资料
+puppeteer需要安装google-chrome，然被墙；服务器上无法安装，如何使用看puppeteer使用，为同事整理；前提你公司使用node，可掘金搜索相关资料
 
 
 

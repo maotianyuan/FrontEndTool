@@ -2,7 +2,7 @@
 
 ### plugin
 - [puppeteer使用](/plugin/puppeteer使用.md)
-- [html2canvas_jsPDF](/plugin/Html2canvas_jsPDF.md)
+- [html2canvas_jsPDF](/plugin/Html2canvas_JSPDF.md)
 
 
 ### other
