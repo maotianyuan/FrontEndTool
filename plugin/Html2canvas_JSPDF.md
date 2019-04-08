@@ -89,106 +89,106 @@ export default {
 ```
 // 压缩base64
 compressBlob(base64, bili, callback) {
-      let _img = new Image();
-      let _this = this
-      _img.src = base64;
-      _img.onload = function() {
-        let _canvas = document.createElement("canvas");
-        let w = this.width / bili;
-        let h = this.height / bili;
-        _canvas.setAttribute("width", w);
-        _canvas.setAttribute("height", h);
-        _canvas.getContext("2d").drawImage(this, 0, 0, w, h);
-        let base64 = _canvas.toDataURL("image/jpeg");  // 当生成文件很大切是动态数据时，不可忽视png和jgeg
-        _canvas.toBlob(function(blob) {
-          if (blob.size > 1024 * 1024) {
-            _this.compressBlob(base64, bili, callback);
-          } else {
-            callback(blob, base64);
-          }
-        }, "image/jpeg");
+  let _img = new Image();
+  let _this = this
+  _img.src = base64;
+  _img.onload = function() {
+    let _canvas = document.createElement("canvas");
+    let w = this.width / bili;
+    let h = this.height / bili;
+    _canvas.setAttribute("width", w);
+    _canvas.setAttribute("height", h);
+    _canvas.getContext("2d").drawImage(this, 0, 0, w, h);
+    let base64 = _canvas.toDataURL("image/jpeg");  // 当生成文件很大切是动态数据时，不可忽视png和jgeg
+    _canvas.toBlob(function(blob) {
+      if (blob.size > 1024 * 1024) {
+        _this.compressBlob(base64, bili, callback);
+      } else {
+        callback(blob, base64);
       }
-    },
-    downPDF() {
-      if (this.downBtnStatus == 'disabled') {
-        return
-      }
-      let _this = this
-      if (this.loadingInstance) this.loadingInstance.close();
-      this.loadingInstance = this.$loading({
-        lock: true,
-        text: '报告下载中，请勿关闭',
-        customClass: 'primary-loading',
-        background: 'rgba(0,0,0,.5)',
-      });
-      this.downBtnStatus = 'disabled'
-      html2canvas(document.querySelector('#mainRightBoxDoalog'), {
-        allowTaint: false,
-        useCORS: true,
-      }).then(function(canvas) {
-        let contentWidth = canvas.width
-        let contentHeight = canvas.height
-        let pageHeight = contentWidth / 592.28 * 841.89
-        let leftHeight = contentHeight
-        let position = 0
-        let imgWidth = 595.28
-        let imgHeight = 592.28 / contentWidth * contentHeight
-        let pageData = 0;
+    }, "image/jpeg");
+  }
+},
+downPDF() {
+  if (this.downBtnStatus == 'disabled') {
+    return
+  }
+  let _this = this
+  if (this.loadingInstance) this.loadingInstance.close();
+  this.loadingInstance = this.$loading({
+    lock: true,
+    text: '报告下载中，请勿关闭',
+    customClass: 'primary-loading',
+    background: 'rgba(0,0,0,.5)',
+  });
+  this.downBtnStatus = 'disabled'
+  html2canvas(document.querySelector('#mainRightBoxDoalog'), {
+    allowTaint: false,
+    useCORS: true,
+  }).then(function(canvas) {
+    let contentWidth = canvas.width
+    let contentHeight = canvas.height
+    let pageHeight = contentWidth / 592.28 * 841.89
+    let leftHeight = contentHeight
+    let position = 0
+    let imgWidth = 595.28
+    let imgHeight = 592.28 / contentWidth * contentHeight
+    let pageData = 0;
 
-        // if(_this.typeLen>13){  // 注释代码 实际调整 .8 1 参数改观不大
-             // pageData = canvas.toDataURL('image/jpeg', .8)
-        // }else{
-             pageData = canvas.toDataURL('image/jpeg', 1)
-        // }
+    // if(_this.typeLen>13){  // 注释代码 实际调整 .8 1 参数改观不大
+          // pageData = canvas.toDataURL('image/jpeg', .8)
+    // }else{
+          pageData = canvas.toDataURL('image/jpeg', 1)
+    // }
 
-        console.log(pageData.length)
-        var BILI = 1;   
-        switch (_this.typeLen) {  //根据Pdf页数压缩 比例，否则页书过大，文件则过大，部分浏览器电脑会崩
-          case 11:
-            BILI = 1.1;
-            break;
-          case 12:
-            BILI = 1.256;
-            break;
-          case 13:
-            BILI = 1.256;
-            break;
-          case 14:
-            BILI = 1.256;
-            break;
-          default:
-            BILI = 1;
-            break;
+    console.log(pageData.length)
+    var BILI = 1;   
+    switch (_this.typeLen) {  //根据Pdf页数压缩 比例，否则页书过大，文件则过大，部分浏览器电脑会崩
+      case 11:
+        BILI = 1.1;
+        break;
+      case 12:
+        BILI = 1.256;
+        break;
+      case 13:
+        BILI = 1.256;
+        break;
+      case 14:
+        BILI = 1.256;
+        break;
+      default:
+        BILI = 1;
+        break;
+    }
+    _this.compressBlob(pageData, BILI, function(blob, base64) {  // 实际此函数compressBlob并未调用，而是将png改为jepg优化，压缩base64 多种情况压缩清晰度不能稳定保证
+      console.log(base64.length)
+      console.log(base64.length / pageData.length)
+
+      let PDF = new jsPDF('', 'pt', [imgWidth,imgHeight])
+      PDF.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight)
+      PDF.save(_this.PAGE_TITLE + '.pdf')
+
+      // 可忽视业务代码
+      setTimeout(() => {
+        document.querySelector('#mainRightBoxDoalog').style.cssText = ''
+        _this.downBtnStatus = 'normal'
+        _this.loadingInstance.close();
+        _this.handleClose()
+
+        for (var i = 0; i < 15; i++) {  
+            _this.multipleBottomDataDialog[`btmDialog${i}num`] = Object.assign({
+              id: `btm${i}num`,
+              isPdf: true,
+            } || {}, {})
+            _this.multipleBottomDataDialogZhanBI[`btmDialog${i}ratio`] = Object.assign({
+              id: `btm${i}ratio`,
+              isPdf: true
+            } || {}, {})
         }
-        _this.compressBlob(pageData, BILI, function(blob, base64) {  // 实际此函数compressBlob并未调用，而是将png改为jepg优化，压缩base64 多种情况压缩清晰度不能稳定保证
-          console.log(base64.length)
-          console.log(base64.length / pageData.length)
-
-          let PDF = new jsPDF('', 'pt', [imgWidth,imgHeight])
-          PDF.addImage(pageData, 'JPEG', 0, 0, imgWidth, imgHeight)
-          PDF.save(_this.PAGE_TITLE + '.pdf')
-
-          // 可忽视业务代码
-          setTimeout(() => {
-            document.querySelector('#mainRightBoxDoalog').style.cssText = ''
-            _this.downBtnStatus = 'normal'
-            _this.loadingInstance.close();
-            _this.handleClose()
-
-            for (var i = 0; i < 15; i++) {  
-                _this.multipleBottomDataDialog[`btmDialog${i}num`] = Object.assign({
-                  id: `btm${i}num`,
-                  isPdf: true,
-                } || {}, {})
-                _this.multipleBottomDataDialogZhanBI[`btmDialog${i}ratio`] = Object.assign({
-                  id: `btm${i}ratio`,
-                  isPdf: true
-                } || {}, {})
-            }
-          }, 2000)
-        })
-      })
-    },
+      }, 2000)
+    })
+  })
+},
 ```
 
 ### 总结

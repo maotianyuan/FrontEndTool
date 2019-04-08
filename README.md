@@ -1,11 +1,12 @@
 # FrontEndTool
 
 ### plugin
-- [随便记](/plugin/随便记.md)
+- [puppeteer使用](/plugin/puppeteer使用.md)
+- [html2canvas_jsPDF](/plugin/html2canvas_jsPDF.md)
 
 
 ### other
-- [puppeteer使用](/other/puppeteer使用.md)
+- [随便记](/other/随便记.md)
 
 
 ### git
