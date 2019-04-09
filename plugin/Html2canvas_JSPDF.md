@@ -5,7 +5,7 @@
 场景 将多个element html片段，生成多页PDF，不满一页PDF空白，并添加页脚；
 mergePageIndex 需要于下一页合并的 element数组元素下标值（因为有的html片段过短）；
 
-```downPdf.js
+```js downPdf.js
 import JsPDF from 'jspdf'
 import Html2canvas from 'html2canvas'
 /**
@@ -86,7 +86,7 @@ export default {
 ### 不分页PDF
 
 对一块html 片段生成 对应PDF
-```
+```js 
 // 压缩base64
 compressBlob(base64, bili, callback) {
   let _img = new Image();
