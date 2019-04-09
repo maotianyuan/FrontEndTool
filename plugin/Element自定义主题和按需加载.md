@@ -115,13 +115,13 @@ et.run({
 ```
 
 #### 七、Vue配置Element-theme自定义主题和按需引入配置实例
-- 1. 依赖安装：步骤一
-- 2. 自定义主题配置：
-  - 2.1 步骤二：生成默认主题的变量文件`et --init ./src/lib/element-variables.scss`
-  - 2.2 创建自定义主题变量文件`./src/app/index/theme-variables.scss` 覆盖 et -i 生成默认变量 见下列 `theme-variables.scss` 优点：不改变默认主题变量文件
-- 3. 模块引入:  步骤五，见下列 `babel.confing.js`
-- 4. json配置: 步骤六，见下列 `package.json`
-- 5. vue项目使用: 见`main.js` `lib/element.js`
+ 1. 依赖安装：如上步骤一
+ 2. 自定义主题配置：
+  - 2.1 如上步骤二：生成默认主题的变量文件``et --init ./src/lib/element-variables.scss``
+  - 2.2 创建自定义主题变量文件``./src/app/index/theme-variables.scss`` 覆盖 et -i 生成默认变量 见下列 `theme-variables.scss` 优点：不改变默认主题变量文件
+ 3. 按需引入:  步骤五，见下列 `babel.confing.js`
+ 4. json配置: 步骤六，见下列 `package.json`
+ 5. vue项目使用: 见`main.js` `lib/element.js`
 
 
 - package.json 
