@@ -1,7 +1,6 @@
 # FrontEndTool
 
 ### plugin
-- [echarts](/plugin/echarts/index.js)
 - [Element自定义主题和按需加载](/plugin/Element自定义主题和按需加载.md)
 - [puppeteer使用](/plugin/puppeteer使用.md)
 - [html2canvas_jsPDF](/plugin/Html2canvas_JSPDF.md)
