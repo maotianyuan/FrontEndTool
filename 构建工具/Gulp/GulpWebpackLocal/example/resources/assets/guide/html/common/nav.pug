@@ -1,0 +1,30 @@
+nav.navbar.bmw-navbar
+  .navbar-header
+    a.bmw-navbar-brand(href='/index')
+      span.icon-bmw-bmw
+      h1.navbar-title
+        span
+          |光速斑马
+          br
+        span
+          |前端框架
+  
+  .collapse.navbar-collapse#bmw-navbar-collapse
+    ul.nav.navbar-nav.navbar-right
+      li.nav-bell
+        div
+          a(href='/notice')
+            span.icon-bmw-bell
+            span.badge.badge-danger
+      li.nav-avatar
+        div
+          span.icon-bmw-avatar
+      li.nav-info.dropdown.bmw-user-control
+        a.no-login(href='/login')
+            |您好，请登陆
+        ul.dropdown-menu 
+          li
+            a.regect-out(href='/personal')
+              span
+                |个人信息
+            

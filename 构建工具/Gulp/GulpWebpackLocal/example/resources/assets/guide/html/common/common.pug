@@ -1,0 +1,56 @@
+//-
+   Created by Mty on 2018/07/03.
+   Email: tianyuan.mao@zebra-c.com
+   Update: Mty 2018-07-03 14:49:02
+   Name: 宝马前台默认模版
+
+
+block vars
+    - var config = {title:"", body:{cls:"",contentCls:"indexConBox"}}
+doctype html
+html(lang="en-us")
+    //- HTML head
+    head
+        meta(charset="utf-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        title #{(config.title?config.title+' - ':'')+'斑马'}
+        meta(name='keywords',content='zebra')
+        meta(name='description',content='光速斑马前端框架')
+        meta(name='csrf-token',content='{{csrf_token}}')
+        meta(content='yes',name='apple-mobile-web-app-capable')
+        meta(content='telephone=no',name='format-detection')
+        meta(httpEquit='Cache-Control',content='no-cache, no-store, must-revalidate')
+        link(rel='shortcut icon',href='/favicon.png')
+        link(rel='stylesheet',href='/lib/widget/bootstrap/bootstrap-v3.3.7/css/bootstrap.min.css')
+        link(rel='stylesheet',href='/lib/widget/guide-ui/ionicons.min.css')
+        link(rel='stylesheet',href='/guide/css/_com/com.css')
+        block css
+        block head
+    //- HTML BODY
+    body
+        include ./nav.pug
+        include ./aside.pug
+        //-页面内容区域
+        .bmw-main-container.scroll-bar
+          .container-fluid.scroll-bar
+            block content
+        //- 尾部
+        block footer
+        //- 弹框
+        block modal
+        script.
+          if (window["context"] == undefined) {
+          if (!window.location.origin) {
+          console.log('ie')
+          window.location.origin = window.location.protocol + "//" + window.location.hostname + (window.location.port ? ':' + window.location.port: '');
+          }
+          window["context"] = location.origin;
+          }
+          var baseUrl = window.location.origin+'/';
+          var imgBaseUrl = window.location.origin+'/';
+        script(src='/lib/core/jquery-1.10.2.min.js',type='text/javascript')
+        script(src='/lib/widget/bootstrap/bootstrap-v3.3.7/js/bootstrap.min.js',type='text/javascript')
+        script(src='/guide/js/_com/com.min.js',type='text/javascript')
+        block js
+        script(src='/lib/widget/layer/layer.js',type='text/javascript')
+        script(src='/lib/widget/waves.js',type='text/javascript')

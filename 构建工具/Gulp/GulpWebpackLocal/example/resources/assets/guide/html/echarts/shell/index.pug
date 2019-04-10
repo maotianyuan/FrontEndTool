@@ -1,0 +1,25 @@
+extends ../../common/common.pug
+
+block vars
+    - var config = {title:"图库", body:{cls:"",contentCls:"indexConBox"}}
+
+    //- 后端参数可通过此传输
+block head
+    //- meta(name='example-data',content='{{php_data}}')
+
+block css
+    link(href='/guide/css/echarts/shell/index.css',rel='stylesheet')
+
+block js
+    script(src='/lib/widget/echarts/echarts.min.js',type='text/javascript')
+    script(src='/guide/js/echarts/shell/index.min.js',type='text/javascript')
+
+//- 页面主体内容
+block content
+    div.bmw-title
+        span.title 图库 
+    div.seciton-wrap
+        div.section-split.section-left
+            include ./template/line-bar.pug
+        div.section-split.section-right
+

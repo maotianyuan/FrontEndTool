@@ -1,0 +1,52 @@
+aside.bmw-main-aside
+  nav.bmw-nav-aside.scroll-bar
+    ul#asideUl
+      li.index
+        a.waves-effect.waves-dark(href='/index')
+          span.ion.icon-bmw-home
+          span
+            |首页 #{env}
+      li.gulp
+        a.waves-effect.waves-dark(href='/gulp')
+          span.ion.icon-bmw-report
+          span|框架
+        ul  
+          li.gulp-know(
+              class!="@if(Auth::user()->hasRole('manager'))menu-show @else menu-hide@endif"            
+            )
+            a(href='/gulp/know')
+              span|提前需知 
+          li.gulp-use
+            a(href='/gulp/use')
+              span|使用方法
+      li.question
+        a.waves-effect.waves-dark(href='/question')
+          span.ion.icon-bmw-report
+          span|常见问题
+        ul  
+          li.gulp-know
+            a(href='/question/mty')
+              span|前端常见问题     
+      li.api
+        a.waves-effect.waves-dark(href='/api')
+          span.ion.icon-bmw-alarm
+          span|公共方法
+        ul  
+          li.api-core
+            a(href='/api/core')
+              span|基础框架
+          li.api-utils
+            a(href='/api/util')
+              span|工具
+          li.api-widget
+            a(href='/api/widget')
+              span|组件
+                
+      li.echarts
+        a.waves-effect.waves-dark(href='/echarts')
+          span.ion.icon-bmw-report
+          span|Echarts汇总
+        ul  
+          li.echarts-shell
+            a(href='/echarts/shell')
+              span|图库

@@ -1,0 +1,22 @@
+extends ../common/common.pug
+
+block vars
+    - var config = {title:"公共方法", body:{cls:"",contentCls:"indexConBox"}}
+
+block css
+    //- link(href='/guide/css/home/index.css',rel='stylesheet')
+
+block js
+    //- script(src='/guide/js/home/index.min.js',type='text/javascript')
+
+//- 页面主体内容
+block content
+    div.panel.panel-default
+      div.panel-body
+          h3 承载公共方法
+          p 存放目录 public/lib
+          p 工具引用可以import 其中路径配置在 example/source.cofig.js
+          
+
+
+

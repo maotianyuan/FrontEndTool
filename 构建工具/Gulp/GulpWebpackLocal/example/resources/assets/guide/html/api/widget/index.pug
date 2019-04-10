@@ -1,0 +1,26 @@
+extends ../../common/common.pug
+
+block vars
+    - var config = {title:"组件", body:{cls:"",contentCls:"indexConBox"}}
+
+block css
+    //- link(href='/guide/css/home/index.css',rel='stylesheet')
+
+block js
+    //- script(src='/guide/js/home/index.min.js',type='text/javascript')
+
+//- 页面主体内容
+block content
+    div.panel.panel-default
+      div.panel-body
+          h3 组件
+          p 1: 时间
+          p 2: 表格
+          p 3: 文件上传 fileinput
+          p 4: dataTables
+          p 5: waves 水波纹
+          p 6: layer
+
+
+
+

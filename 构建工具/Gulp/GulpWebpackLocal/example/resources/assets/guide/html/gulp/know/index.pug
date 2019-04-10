@@ -1,0 +1,33 @@
+extends ../../common/common.pug
+
+block vars
+    - var config = {title:"提前需知", body:{cls:"",contentCls:"indexConBox"}}
+
+block css
+    //- link(href='/guide/css/home/index.css',rel='stylesheet')
+
+block js
+    //- script(src='/guide/js/home/index.min.js',type='text/javascript')
+
+//- 页面主体内容
+block content
+    div.panel.panel-default
+      div.panel-body
+          h3 gulp注意点
+          p 1：gulp 带点[.]为监听, 但不监听mod-js下的模块js文件，版本号为秒，资源编译且接口请求默认请求本地，不可将代码进行sftp upload
+          p 2：gulp 不带点 为压缩
+          p 3：创建新的文件夹 需要重新启动监听【关闭监听后在创建新文件夹】
+          p 4：每更新css和js时候 需要将对应html更新下 主要功能是：更新版本后缀 用户重新请求资源[pipe(replace(/\.js/ig,'.js?_='+new Date().getTime()))]
+          p 5：单独打包各自负责文件js
+          p 6：gulp 加号[+]为监听式压缩，版本号变成年月日，资源压缩且接口请求变为服务器路径，执行此操作后将代码进行sftp upload 
+          p 6：每次从git pull 代码需要将gulp监听关闭
+          p 7：支持本地开发 以及mock伪数据
+          p 8：需使用pug模板引擎
+          p 9：需要先配置路由 在[example/router.config.js] 每次新增路由需要从新启用gulp监听
+          p 10：资源路径与php的一致 并使用相对路径 弃用后台{{assets('')}}
+          p 11：页面路由跳转 需要在router中配置，弃用后台{{url('')}},跟后端配路由保持一致
+          p 12：现版本 严格 点[.]开发在本地 加号[+]开发在服务器
+          p 13：并为对本地服务器进行容错处理，出现中断，需要重新开启命令
+
+
+

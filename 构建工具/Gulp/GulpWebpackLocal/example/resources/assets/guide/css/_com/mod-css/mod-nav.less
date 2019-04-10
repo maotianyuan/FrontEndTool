@@ -1,0 +1,187 @@
+/**
+ * 公共头部样式
+ */
+@navHeight: 68px; //导航高度
+@test: 1px solid red; //测试边框
+@asideWidth: 180px; /**
+ * default navbar
+ */
+
+.navbar {
+  border-radius: 0;
+  position: relative;
+  min-height: @navHeight;
+  margin-bottom: 0;
+  border: none;
+
+  .nav-info {
+    .caret {
+      // margin-top:32px;
+    }
+  }
+
+  .navbar-nav > .nav-avatar > div,
+  .navbar-nav > .nav-bell > div,
+  .navbar-nav > .nav-info > div {
+    height: @navHeight;
+    line-height: @navHeight;
+    padding: 0 4px;
+    color: #687284;
+
+    .badge {
+      position: absolute;
+      top: 20px;
+      right: 12px;
+      padding: 3px;
+      height: 9px;
+      display: block;
+      border-radius: 50%;
+    }
+  }
+
+  .navbar-nav > .nav-bell > div {
+    padding: 0 15px;
+
+    a {
+      color: #687284;
+
+      &:hover {
+        color: #687284;
+      }
+
+      &:link {
+        color: #687284;
+      }
+    }
+
+    .icon-bmw-bell {
+      font-size: 18px;
+      margin-top: 24px;
+        color: #687284;
+      float: left;
+    }
+  }
+
+  .navbar-nav > .nav-info > div {
+    padding: 0 14px 0 4px;
+  }
+  //您好请登录设置
+  .navbar-nav > li > a {
+    height: @navHeight;
+    line-height: @navHeight;
+    padding: 0 14px 0 4px;
+  }
+}
+/**
+ * BMW nav style
+ */
+
+.bmw-navbar {
+  background-color: #ecf0f5;
+  position: relative;
+  z-index: 2;
+  //导航点击颜色
+  .navbar-nav > .active > a,
+  .navbar-nav > .active > a:focus,
+  .navbar-nav > .active > a:hover {
+    color: #555;
+    background-color: #e7e7e7;
+  }
+
+  .navbar-header {
+    width: @asideWidth;
+  }
+
+  .navbar-collapse {
+    background: #ecf0f5;
+  }
+  //头像
+  .bmw-user-control {
+    position: relative;
+
+
+
+    span {
+      color: #687284;
+    }
+  }
+
+  .dropdown > a > span {
+    color: #687284;
+  }
+}
+
+.navbar-right {
+  .nav-avatar {
+    .icon-bmw-avatar {
+      font-size: 30px;
+      margin-top: 18px;
+
+      float: left;
+    }
+    .bmw-avatar {
+      font-size: 30px;
+      margin-top: 18px;
+      float:left;
+      line-height: 30px;
+      width: 30px;
+      height:30px;
+    }
+  }
+
+  .nav-info .username {
+    max-width: 105px;
+    display: inline-block;
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 45px;
+    text-align: center;
+  }
+}
+//宝马头部品牌
+
+.bmw-navbar-brand {
+  width: 100%;
+  height: @navHeight;
+  display: block;
+  overflow: hidden;
+  text-align: center;
+  background: #fff;
+  position: relative;
+  color: #687284;
+
+  & > .icon-bmw-bmw {
+    position: absolute;
+    top: 0;
+    margin-top: 16px;
+    left: 0;
+    margin-left: 16px;
+    font-size: 32px;
+    color: #687284;
+  }
+
+  .navbar-title {
+    font-size: 14px;
+    width: 112px;
+    float: right;
+    top: 0;
+    color: #43555E;
+    text-align: left;
+    line-height: 20px;
+    margin: 15px 9px 6px 0;
+  }
+}
+
+.toolbox{
+  ul>li>a{
+    position: relative;
+    .new{
+      color:#EF5351;
+      position: absolute;
+      right:21px;
+      top:15px;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+extends ../../common/common.pug
+
+block vars
+    - var config = {title:"使用方法", body:{cls:"",contentCls:"indexConBox"}}
+
+block css
+    //- link(href='/guide/css/home/index.css',rel='stylesheet')
+
+block js
+    //- script(src='/guide/js/home/index.min.js',type='text/javascript')
+
+//- 页面主体内容
+block content
+    div.panel.panel-default
+      div.panel-body
+          h3 命令行命令
+          p 1：gulp .example-guide-all
+          h3 package 配置快捷命令
+          p scripts{ 
+            br
+            |   '.example':'gulp .example-guide-all'  
+            br
+            |   '+example':'gulp +example-guide-all' 
+            br
+            | }
+          p 2：gulp +example-guide-all
+          p 3：gulp example-guide-pug 当公共aside等更改时，需要将所有html更新一遍，所有需要对所有pug进行打包
+          p 4：gulp example-guide-less 对公共资源进行打包
+
+
+

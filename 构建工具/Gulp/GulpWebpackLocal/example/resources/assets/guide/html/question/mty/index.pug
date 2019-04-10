@@ -1,0 +1,38 @@
+extends ../../common/common.pug
+
+block vars
+    - var config = {title:"常见问题汇总", body:{cls:"",contentCls:"indexConBox"}}
+
+block css
+    //- link(href='/guide/css/home/index.css',rel='stylesheet')
+
+block js
+    //- script(src='/guide/js/home/index.min.js',type='text/javascript')
+
+//- 页面主体内容
+block content
+    div.panel.panel-default
+      div.panel-body
+          h3 HTML
+          p 1：检查 页面是否采用公共模板方式进行引用 【备注：公共模块需要抽离出来 并整理文档备注使用说明】
+          p 2：检查 HTML 版本号是否更新，针对已更改外部引用资源的页面 【备注：外部资源更新 HTML版本号也更新，公共资源进行更新，统一处理所有页面版本号】
+          p 3：检查 页面 中资源是否重复引用
+          p 4：检查 页面 在多种浏览器中的兼容性
+          p 5：检查 网站 TDK设置
+          p 6：检查 网站 title 描述是否统一整齐合理
+          h3 CSS
+          p 1：检查 公共样式与UI整理统一样式是否完全一致，对于视差与兼容造成的差异需要进行微调整 【备注：公共组件需要抽离，并整理文档，通过继承和层叠重用已有样式】
+          p 2：检查 CSS 备注情况
+          p 3：检查 项目中的小图标 是否使用全局定义 字体图标或者雪碧图 【备注：针对项目定制 公共小图标库 UI需准备svg图片】
+          h3 JS
+          p 1：检查 支持模块化工具的项目 是否采用模块化方式进行编写 
+          p 2：检查 支持代码压缩的项目 是否进行压缩后才上传 
+          p 3：检查 公共方法能解决的问题，是否采用统一公共方法 【备注：频繁使用方法需要抽离 并整理文档备注使用说明】
+          p 4：检查 JS 备注情况 【业务型代码 需整理备注信息】
+          p 5：检查 JS 接口请求是否重复
+          h3 项目
+          p 1：下班前需要提交git
+          p 2：每个项目是否有对应模块详情介绍
+
+
+

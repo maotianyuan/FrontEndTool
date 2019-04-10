@@ -1,0 +1,885 @@
+
+@navHeight: 68px; //导航高度
+@test: 1px solid red;//测试边框
+
+.bmw-main-aside{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  top: @navHeight;
+  z-index: 1;
+  width: 180px;
+  background-color: #fff;
+}
+
+
+/*
+ * 顶部导航
+ */
+
+
+@media (max-width: 768px) {
+  .bmw-navbar .navbar-header{
+    width: auto;
+  }
+  .navbar-brand{
+    float: left;
+    padding: 20px 10px;
+  }
+  .navbar-brand-img{
+    padding: 17px 10px;
+  }
+  .navbar-brand-img img{
+    height: 28px;
+  }
+
+}
+#noneHover.a{
+  cursor: default;
+}
+
+/* 搜索 */
+.navbar-form{
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+.navbar-form .form-control,
+.navbar-form .btn{
+  float: left;
+  height: 30px;
+  padding: 2px 12px;
+  max-width: 140px;
+  color: #fff;
+  font-size: 12px;
+  border-color: #3d3d3d;
+  background-color: #3d3d3d;
+  border-radius: 15px 0 0 15px;
+}
+.navbar-form .btn{
+  float: right;
+  padding:4px 14px 4px 10px;
+  color: #fff;
+  border-radius: 0 15px 15px 0;
+}
+.navbar-form .btn .ion{
+  font-size: 20px;
+}
+@media (max-width: 768px) {
+  .navbar-form .form-control{
+    float: none;
+    padding-right: 50px;
+    border-radius: 15px;
+    max-width: none;
+  }
+  .navbar-form .btn{
+    margin-top: -35px;
+  }
+}
+
+.navbar-nav>li>a{
+  height: 62px;
+  line-height: 62px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.navbar-nav>li>a .ion{
+  float: left;
+  margin-top: 18px;
+  font-size: 26px;
+}
+.bmw-user-control{
+  margin-right: 5px;
+}
+.bmw-user-control>a>img{
+  width: 32px;
+  height: 32px;
+  margin-right: 5px;
+  border-radius: 18px;
+}
+.navbar-nav>li>a .badge{
+  position: absolute;
+  top: 12px;
+  right: 4px;
+}
+
+.bmw-dropdown-message{
+  width: 280px;
+  padding: 0;
+  margin: 0;
+  border-radius:  0 0 4px 4px;
+  overflow: hidden;
+}
+.bmw-dropdown-message>.list-group-item{
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  border-radius: 0;
+}
+.bmw-dropdown-message>.list-group-item:first-child{
+  border-top: none;
+  color: #333;
+}
+.bmw-dropdown-message>a>strong,
+.bmw-dropdown-message>a>span{
+  display: block;
+
+}
+.bmw-dropdown-message>a>strong{
+  margin-bottom: 3px;
+  font-weight: normal;
+  color: #333;
+}
+.bmw-dropdown-message>a>span{
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #999;
+}
+.bmw-dropdown-message i{
+  font-size: 12px;
+  font-style: normal;
+  color: #98a6ad;
+}
+.bmw-dropdown-message>.list-group-item:last-child{
+  text-align: right;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.dropdown-menu>li>a{
+  padding: 6px 20px;
+}
+.dropdown-menu>li>a>.ion{
+  float: left;
+  font-size: 20px;
+  margin-right: 15px;
+  margin-top: 1px;
+}
+.navbar .ion-log-out{
+  color: #ff0000;
+}
+
+
+/*
+ * 侧导航
+ */
+.bmw-nav-shrink-btn{
+  display: block;
+  height: 34px;
+  line-height: 34px;
+  width: 100%;
+  background-color:#fff;
+  color: #999;
+  font-size: 20px;
+  text-align: center;
+}
+.bmw-nav-shrink-btn .ion{
+  font-size: 20px;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transition: -webkit-transform 0.15s;
+  -o-transition: -o-transform 0.15s;
+  transition: transform .15s;
+}
+.bmw-nav-shrink-btn:hover,
+.bmw-nav-shrink-btn:focus{
+  color: #398BF7;
+  background-color: #fff;
+}
+
+.bmw-nav-aside .ion{
+  font-size: 16px;
+}
+.bmw-nav-aside.scroll-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+#js-aside-collapse{
+  a{
+    font-size:14px;
+  }
+  ul>li>a{
+    font-size:13px;
+  }
+}
+.bmw-nav-aside::-webkit-scrollbar-track{
+  // background-color: #333;
+}
+.bmw-nav-aside::-webkit-scrollbar-thumb{
+  // background-color: #ccc;
+}
+.bmw-nav-aside .panel{
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.bmw-nav-aside ul,
+.bmw-nav-aside li{
+  padding: 0;
+  list-style-type: none;
+}
+.bmw-nav-aside li{
+  margin: 10px 0;
+  width: 100%;
+}
+.bmw-nav-aside li a{
+  display: block;
+  padding:0 15px;
+  height: 44px;
+  line-height: 44px;
+  color: #687284;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#asideUl>li>a{
+  font-weight: 700;
+}
+.bmw-nav-aside li a:hover{
+  color: #5D769D ;
+  font-weight: 700;
+}
+
+#noneHover>a:hover{
+  color: #687284;
+  cursor: default;
+  font-weight: normal;
+}
+
+
+.bmw-nav-aside>ul>.has-children-active>a{position: relative;}
+/*.bmw-nav-aside>ul>.has-children-active>a:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color:#ffef02 ;
+}*/
+.bmw-nav-aside li li{
+  margin: 0;
+}
+.bmw-nav-aside li li a{
+  padding-left: 46px;
+  color: #687284;
+}
+.bmw-nav-aside li .ion{
+  float: left;
+  margin:13px 0 0 0 ;
+  color:#A6B6BF;
+  // margin:11px 10px 0 0;
+  width: 30px;
+}
+
+.bmw-nav-aside li .ion-chevron-right{
+  float: right;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+  -webkit-transition: -webkit-transform 0.15s;
+  -o-transition: -o-transform 0.15s;
+  transition: transform .15s;
+}
+
+.bmw-nav-aside .collapsed .ion-chevron-right{
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.bmw-nav-aside li.active>a{
+  color: #5D769D ;
+  font-weight: 700;
+  .ion{
+    color:#5D769D;
+  }
+}
+
+.bmw-nav-aside li .badge{
+  float: right;
+  margin-top:13px;
+}
+
+.bmw-nav-aside li.bmw-nav-aside-group{
+  margin: 10px 0;
+  padding-left: 20px;
+  font-size: 12px;
+}
+.bmw-nav-aside li li.bmw-nav-aside-group{
+  padding-left: 50px;
+}
+// .bmw-nav-aside li ul{display: none;}
+// .bmw-nav-aside li ul.collapsing{display: block;}
+
+
+/*
+ * 侧导航收缩
+ */
+.bmw-nav-aside-narrow .bmw-navbar .navbar-header{
+  width: 100px;
+}
+.bmw-nav-aside-narrow .navbar-brand{
+  padding-top: 15px;
+}
+.bmw-nav-aside-narrow .navbar-brand img{
+  margin-right: 0;
+  float: none;
+}
+.bmw-nav-aside-narrow .navbar-brand span{
+  display: none;
+}
+.bmw-nav-aside-narrow .navbar-brand .caret{
+  display: inline-block;
+  margin-left: 0;
+}
+
+.bmw-nav-aside-narrow .bmw-main-aside{
+  width: 100px;
+}
+.bmw-nav-aside-narrow .bmw-nav-shrink-btn .ion{
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+.bmw-nav-aside-narrow .bmw-nav-aside>ul>li>a{
+  padding: 0 10px;
+  text-align: center;
+}
+.bmw-nav-aside-narrow .bmw-nav-aside>ul>.has-children-active>a:before{
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background-color:#5D769D  ;
+}
+.bmw-nav-aside-narrow .bmw-nav-aside>ul>li>a>span{
+  display: none;
+}
+.bmw-nav-aside-narrow .bmw-nav-aside>ul>li>ul>li>a{
+  position: relative;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.bmw-nav-aside-narrow .bmw-nav-aside>ul>li>a .ion{
+  margin-right: 0;
+  float: none;
+  display: inline-block;
+}
+.bmw-nav-aside-narrow .bmw-nav-aside .badge{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  margin-top: 0;
+  display: block;
+}
+.bmw-nav-aside-narrow .bmw-nav-aside li.bmw-nav-aside-group{
+  padding:0 5px;
+  text-align: center;
+}
+.bmw-nav-aside-narrow .bmw-nav-aside li li.bmw-nav-aside-group{
+  display: none;
+}
+.bmw-nav-aside-narrow .bmw-nav-aside .collapse.in,
+.bmw-nav-aside-narrow .bmw-nav-aside .collapsing{
+  background-color: #fff;
+}
+
+.bmw-nav-aside-narrow .navbar-brand-img>.bmw-brand-img-lg{
+  display: none;
+}
+.bmw-nav-aside-narrow .navbar-brand-img{
+  padding-top:18px;
+}
+.bmw-nav-aside-narrow .navbar-brand-img>.bmw-brand-img-sm{
+  display: block;
+  height: 28px;
+}
+
+.bmw-nav-aside-narrow .bmw-main-container{
+  left: 100px;
+}
+
+@media (max-width: 768px) {
+  // .bmw-nav-aside-narrow .bmw-navbar .navbar-header{
+  //   width: auto;
+  // }
+  .bmw-nav-aside-narrow .navbar-brand{
+    padding-top: 13px;
+    width: 100px;
+    text-align: center;
+  }
+  .bmw-nav-aside-narrow .navbar-brand>img,
+  .bmw-nav-aside-narrow .navbar-brand>.bmw-brand-img-sm{
+    float: none;
+    display: inline-block;
+  }
+  .bmw-nav-aside-narrow .navbar-brand .caret{
+    display: block;
+    margin: 10px auto 0;
+  }
+}
+
+
+/*
+ * 页头
+ */
+
+.page-header .breadcrumb{
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+
+/*
+ * 分页
+ */
+.bmw-pagination-wrapper:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.bmw-pagination-wrapper{
+  zoom: 1;
+  margin: 20px 0;
+}
+.bmw-pagination-wrapper .pagination{
+  float: left;
+  margin: 0 10px 10px 0;
+}
+.bmw-pagination-form{
+  float: left;
+}
+.bmw-pagination-form input.form-control{
+  width: 50px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .pagination>li{display: none;}
+  .pagination>li.first,
+  .pagination>li.prev,
+  .pagination>li.next,
+  .pagination>li.active,
+  .pagination>li.last{display: inline;}
+
+  .bmw-pagination-wrapper{margin: 20px 0;}
+  .bmw-pagination-form{display: none;}
+  .bmw-pagination-wrapper .pagination{
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+
+.bmw-pagination-gap>li>a,
+.bmw-pagination-gap>li>span{
+  margin-left:10px;
+  border-radius: 3px;
+}
+
+
+/*
+ *  页面状态
+ */
+.bmw-page-status{
+  width: 450px;
+  margin: 10% auto;
+  text-align: center;
+}
+.bmw-page-status h1{
+  font-size: 120px;
+  letter-spacing: 5px;
+}
+.bmw-page-status h2{
+  margin-bottom: 20px;
+  padding: 20px 0;
+  background-color: #ddd;
+  border-radius: 5px;
+
+}
+.bmw-page-status p{
+  line-height: 30px;
+}
+
+
+/*
+ *  登陆
+ */
+.bmw-login-wrapper{
+  height: 100%;
+  padding-top: 1px;
+  background-color: #1b1a19;
+  color: #999;
+}
+.bmw-login-wrapper a{color: #999;}
+.bmw-login-wrapper a:hover{text-decoration: underline;}
+
+.bmw-login-wrapper .bmw-login-panel{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  overflow: auto;
+  z-index: 2;
+}
+
+.bmw-login-wrapper .bmw-login-panel .panel{
+  position: relative;
+  z-index: 2;
+  width: 360px;
+  margin:10% auto;
+  background-color: transparent;
+}
+
+.bmw-login-wrapper .bmw-login-panel .panel-heading{
+  text-align: center;
+}
+.bmw-login-wrapper .bmw-login-panel .panel-heading img{
+  height: 40px;
+}
+.bmw-login-wrapper .bmw-login-panel .panel-heading h1{
+  font-size: 18px;
+  font-weight: normal;
+  color: #ffef02;
+}
+.bmw-login-wrapper .bmw-login-panel .form-group{
+  margin-bottom: 20px;
+}
+.bmw-login-wrapper .bmw-login-panel .checkbox{margin-bottom: 15px;}
+.bmw-login-wrapper .bmw-login-panel .form-control{
+  height: 40px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border-color: #fff;
+}
+.bmw-login-wrapper .bmw-login-panel .input-group-addon{
+  box-shadow: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-right: 0;
+  background-color: #fff;
+  border-color: #fff;
+}
+.bmw-login-wrapper .bmw-login-panel .input-group-addon .ion{
+  width: 24px;
+  font-size: 18px;
+}
+.bmw-login-wrapper .bmw-login-panel .bmw-verification-code{
+  padding-right: 5px;
+}
+.bmw-login-wrapper .bmw-login-panel .bmw-verification-code img{
+  cursor: pointer;
+  height: 28px;
+}
+.bmw-login-wrapper .bmw-login-panel .btn.btn-block{
+  color: #333;
+  font-size: 16px;
+  letter-spacing: 4px;
+  height: 40px;
+}
+.bmw-login-wrapper .bmw-copyright{
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  color: #666;
+}
+
+.bmw-login-wrapper .bmw-particles{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom: 0;
+  z-index: 1;
+  opacity: .15;
+}
+
+/*
+ * 表单搜索页
+ */
+.bmw-search-list-bar .form-group{
+  margin-right: 10px;
+}
+.bmw-search-list-bar .form-group>label{
+  margin-right: 5px;
+}
+
+
+/*
+ * 导航
+ */
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover,
+.nav-tabs.nav-justified>.active>a,
+.nav-tabs.nav-justified>.active>a:focus,
+.nav-tabs.nav-justified>.active>a:hover{
+  background-color: #fff;
+  border-bottom-color: #fff;
+}
+
+.bmw-wizard-nav>li{
+  padding: 0 8px;
+}
+.bmw-wizard-nav>li:first-child{padding-left: 0;}
+.bmw-wizard-nav>li:last-child{padding-right: 0;}
+.bmw-wizard-nav>li>a{
+  padding: 15px 0;
+  color: #333;
+  background-color: #eee;
+  cursor: default;
+}
+.bmw-wizard-nav>li>a .badge{
+  margin-right: 5px;
+}
+@media (max-width: 768px) {
+  .bmw-wizard-nav>li{
+    padding: 0;
+  }
+  .bmw-wizard-nav>li>a{
+    padding: 10px 15px;
+  }
+}
+
+
+/*
+ * 表单验证
+ */
+label.error{
+  display: block;
+  color:#fe4747 ;
+  font-weight: normal;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+label.error-option{
+  margin-top: 0;
+}
+
+/*
+ * 多级菜单
+ */
+.bmw-nav-tree{
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #fdfdfd;
+  width: 220px;
+  overflow: auto;
+}
+.bmw-nav-tree-container {
+  margin-left: 220px;
+}
+
+.bmw-nav-tree>h2{
+  height: 88px;
+  padding: 0 20px 0 30px;
+  margin: 0 0 10px;
+  line-height: 88px;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+.bmw-nav-tree .jstree-default .jstree-wholerow{
+  height: 44px;
+}
+.bmw-nav-tree .jstree-default .jstree-anchor{
+  height: 44px;
+  line-height: 44px;
+}
+.bmw-nav-tree .jstree-default .jstree-themeicon{
+  background: none;
+}
+.bmw-nav-tree .jstree-default .jstree-themeicon:empty{
+  width: auto;
+}
+.bmw-nav-tree .jstree-default .jstree-closed>.jstree-ocl,
+.bmw-nav-tree .jstree-default>.jstree-no-dots .jstree-open>.jstree-ocl{
+  margin-top: 10px;
+}
+.bmw-nav-tree .jstree-default .jstree-node{
+  margin-left: 15px;
+}
+.bmw-nav-tree .jstree-default>.jstree-container-ul>.jstree-node{
+  margin-left: 10px;
+}
+.bmw-nav-tree .jstree-default .jstree-wholerow-clicked,
+.bmw-nav-tree .jstree-default .jstree-wholerow-clicked.jstree-wholerow-hovered{
+  background: #ecedf2;
+}
+.bmw-nav-tree .jstree-default .jstree-wholerow-hovered{
+  background-color: #f4f5f9;
+}
+
+.bmw-nav-shrink-tree-btn{
+  /* 待做 */
+  display: none;
+}
+
+.jstree-contextmenu{
+  z-index: 100;
+}
+
+/*
+ *  帮助类
+ */
+.text-wrap { word-break: break-all;}
+
+.cursor-default{cursor: default!important;}
+.cursor-pointer{cursor: pointer!important;}
+
+.clear{clear: both;}
+.clear-left{clear: left;}
+.clear-right{clear: right;}
+.clear-float{float: none!important;}
+
+.bg-gray{background-color: #eee;}
+
+.m-0{margin: 0px;}
+.m-0-5{margin: 5px;}
+.m-1{margin: 10px;}
+.m-1-5{margin: 15px;}
+.m-2{margin: 20px;}
+.m-2-5{margin: 25px;}
+.m-3{margin: 30px;}
+.mt-0{margin-top: 0px;}
+.mt-0-5{margin-top: 5px;}
+.mt-1{margin-top: 10px;}
+.mt-1-5{margin-top: 15px;}
+.mt-2{margin-top: 20px;}
+.mt-2-5{margin-top: 25px;}
+.mt-3{margin-top: 30px;}
+.mr-0{margin-right: 0px;}
+.mr-0-5{margin-right: 5px;}
+.mr-1{margin-right: 10px;}
+.mr-1-5{margin-right: 15px;}
+.mr-2{margin-right: 20px;}
+.mr-2-5{margin-right: 25px;}
+.mr-3{margin-right: 30px;}
+.mb-0{margin-bottom: 0px;}
+.mb-0-5{margin-bottom: 5px;}
+.mb-1{margin-bottom: 10px;}
+.mb-1-5{margin-bottom: 15px;}
+.mb-2{margin-bottom: 20px;}
+.mb-2-5{margin-bottom: 25px;}
+.mb-3{margin-bottom: 30px;}
+.ml-0{margin-left: 0px;}
+.ml-0-5{margin-left: 5px;}
+.ml-1{margin-left: 10px;}
+.ml-1-5{margin-left: 15px;}
+.ml-2{margin-left: 20px;}
+.ml-2-5{margin-left: 25px;}
+.ml-3{margin-left: 30px;}
+
+.p-0{padding: 0px;}
+.p-0-5{padding: 5px;}
+.p-1{padding: 10px;}
+.p-1-5{padding: 15px;}
+.p-2{padding: 20px;}
+.p-2-5{padding: 25px;}
+.p-3{padding: 30px;}
+.pt-0{padding-top: 0px;}
+.pt-0-5{padding-top: 5px;}
+.pt-1{padding-top: 10px;}
+.pt-1-5{padding-top: 15px;}
+.pt-2{padding-top: 20px;}
+.pt-2-5{padding-top: 25px;}
+.pt-3{padding-top: 30px;}
+.pr-0{padding-right: 0px;}
+.pr-0-5{padding-right: 5px;}
+.pr-1{padding-right: 10px;}
+.pr-1-5{padding-right: 15px;}
+.pr-2{padding-right: 20px;}
+.pr-2-5{padding-right: 25px;}
+.pr-3{padding-right: 30px;}
+.pb-0{padding-bottom: 0px;}
+.pb-0-5{padding-bottom: 5px;}
+.pb-1{padding-bottom: 10px;}
+.pb-1-5{padding-bottom: 15px;}
+.pb-2{padding-bottom: 20px;}
+.pb-2-5{padding-bottom: 25px;}
+.pb-3{padding-bottom: 30px;}
+.pl-0{padding-left: 0px;}
+.pl-0-5{padding-left: 5px;}
+.pl-1{padding-left: 10px;}
+.pl-1-5{padding-left: 15px;}
+.pl-2{padding-left: 20px;}
+.pl-2-5{padding-left: 25px;}
+.pl-3{padding-left: 30px;}
+
+
+/*
+ * dataTable
+ */
+table.dataTable{
+  margin-top: 10px!important;
+  margin-bottom: 5px!important;
+}
+
+table.dataTable thead th:focus{outline: none;}
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before,
+table.dataTable thead .sorting_desc_disabled:after{
+  position: absolute;
+  right: 11px;
+  top: 3px;
+  font-family: "Ionicons";
+  font-size: 17px;
+  color: #ddd;
+  opacity: 1;
+}
+
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_desc:before{
+  content: "\f365";
+}
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_desc:after{
+  top: 10px;
+  content: "\f35f";
+}
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_desc:after{
+  color: #5d9cec;
+}
+
+div.dataTables_wrapper div.dataTables_length,
+div.dataTables_wrapper div.dataTables_info{
+  display: inline-block;
+  padding-top: 5px;
+}
+div.dataTables_wrapper div.dataTables_info{
+  margin-left: 5px;
+}

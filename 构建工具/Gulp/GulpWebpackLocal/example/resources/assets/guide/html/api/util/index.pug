@@ -1,0 +1,25 @@
+extends ../../common/common.pug
+
+block vars
+    - var config = {title:"工具", body:{cls:"",contentCls:"indexConBox"}}
+
+block css
+    //- link(href='/guide/css/home/index.css',rel='stylesheet')
+
+block js
+    //- script(src='/guide/js/home/index.min.js',type='text/javascript')
+
+//- 页面主体内容
+block content
+    div.panel.panel-default
+      div.panel-body
+          h3 util.cnzz.js
+          p 1:import {cnzz} from 'cnzz'  //站长工具 cnzz() 
+          h3 util.zebra.js
+          p 1:easyAjax 公共ajax
+          p 2:parseUrl url参数获取
+          p 3:getYear 获取年
+
+
+
+

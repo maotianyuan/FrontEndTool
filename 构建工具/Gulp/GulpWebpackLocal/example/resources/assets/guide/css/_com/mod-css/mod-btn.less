@@ -1,0 +1,156 @@
+/**
+ * btn-bmw-info 实心宝马蓝
+ * btn-bmw.disabled 禁用
+ * btn-bmw-default 空心宝马蓝
+ * btn-bmw-current 空心黄
+ * bmw-title 标题 .title 标题文字  .tips 提示浅色灰  时间区间.term
+ */
+/**
+ * 实心蓝
+ */
+
+.btn-bmw-info {
+  padding: 4px 18px;
+  border: 1px solid #667184;
+  color: #fff;
+  font-size: 14px;
+  background: #667184;
+
+  &:focus {
+    color: #fff;
+    border: 1px solid #667184;
+    background: #667184;
+  }
+
+  &:hover {
+    color: #fff;
+    border: 1px solid #8B97AA;
+    background: #8B97AA;
+  }
+}
+/**
+ * 禁用
+ */
+.btn.bmw-btn.disabled {
+  background: #EEEEEE;
+  color: #687284;
+  border-radius: 4px;
+  border: 1px solid #eee;
+  &:focus {
+    color: #687284;
+    background: #EEEEEE;
+  }
+
+  &:hover {
+    color: #687284;
+    background: #EEEEEE;
+  }
+}
+
+.btn-bmw.disabled {
+  padding: 4px 18px;
+  border: 1px solid #ECECEC;
+  font-size: 14px;
+  color: #667184;
+  background: #ECECEC;
+
+  &:focus,
+  &:hover {
+    background: #ECECEC;
+  }
+}
+/**
+ * 空心蓝色
+ */
+
+.btn-bmw-default {
+  padding: 4px 18px;
+  border: 1px solid #667184;
+  color: #667184;
+  font-size: 14px;
+  background: #fff;
+
+  &:focus {
+    border: 1px solid #667184;
+    color: #667184;
+    background: #fff;
+  }
+
+  &:hover {
+    background: #fff;
+    border: 1px solid #8B97AA;
+    color: #8B97AA;
+  }
+}
+/**
+ * 空心黄
+ */
+
+.btn-bmw-current {
+  padding: 4px 18px;
+  border: 1px solid #79715c;
+  color: #79715c;
+  font-size: 14px;
+  background: #fff;
+
+  &:focus {
+    background: #fff;
+    border: 1px solid #79715c;
+    color: #79715c;
+  }
+
+  &:hover {
+    border: 1px solid #9F9783;
+    background: #fff;
+    color: #9F9783;
+  }
+}
+/**
+ * 取消 浅色
+ */
+
+.btn-bmw-cancal {
+  padding: 4px 18px;
+  border: 1px solid #8E96A5;
+  color: #8E96A5;
+  font-size: 14px;
+  background: #fff;
+
+  &:focus {
+    background: #fff;
+    border: 1px solid #8E96A5;
+    color: #8E96A5;
+  }
+
+  &:hover {
+    border: 1px solid #B7BDC6;
+    background: #fff;
+    color: #B7BDC6;
+  }
+}
+/**
+ * 标题组件
+ */
+.bmw-title {
+  width: 100%;
+  padding-left: 19px;
+  border-left: 3px solid #687284;
+  margin: 20px 0;
+  clear:both;
+  .title {
+    font-size: 16px;
+    color: #414957;
+  }
+
+  .term {
+    font-size: 13px;
+    color: #687284;
+    margin-left: 10px;
+  }
+
+  .tips {
+    font-size: 13px;
+    color: #ccc;
+    margin-left: 10px;
+  }
+}

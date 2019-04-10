@@ -1,0 +1,38 @@
+extends ../common/common.pug
+
+block vars
+    - var config = {title:"首页", body:{cls:"",contentCls:"indexConBox"}}
+
+    //- 后端参数可通过此传输
+block head
+    meta(name='example-data',content='{{php_data}}')
+
+block css
+    link(href='/guide/css/home/index.css',rel='stylesheet')
+
+block js
+    //- 后端参数也可以通过此传输
+    //- script.
+    //-   var username  = '{{$username}}'//用户名
+    //-   var last_login_time ='{{$last_login_time}}' //登录时间
+    //-   var login_address = '{{$login_address}}' //登陆地点
+    //-   var tip = '{{Auth::user()->is_not_remind}}'
+    script(src='/guide/js/home/index.min.js',type='text/javascript')
+
+//- 页面主体内容
+block content
+  div.content
+      |首页
+
+
+
+
+
+block footer
+  footer.bmw-footer
+    .f-content
+      span(style="color: #8e96a5;font-size: 13px;cursor: default;margin-right: 8px;") 
+        | Copyright©
+        span#footerYear
+        |光速斑马数据科技有限公司，All Rights Reserved
+      a(href="http://www.miitbeian.gov.cn" target="_blank" style="color: #8e96a5;font-size: 13px;cursor: pointer") 京ICP备17036596号-1
