@@ -36,3 +36,6 @@
 - 运行其他来源的代码块
 打开Command然后输入!,选择要执行的snippet名称
 
+
+document.body.contentEditable='true'; //Chrome(Chromium)
+document.designMode='on';  //Firefox(Gecko)
