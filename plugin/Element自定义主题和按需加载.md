@@ -437,8 +437,6 @@ $--color-success: #667184;
 @import './src/lib/element-variables.scss'; // et -i 生成
 ```
 
-
-
 [Element自定义主题](http://element-cn.eleme.io/#/zh-CN/component/custom-theme)
 
 [element-theme](https://www.npmjs.com/package/element-theme)
