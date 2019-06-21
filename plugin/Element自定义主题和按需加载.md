@@ -442,3 +442,12 @@ $--color-success: #667184;
 [Element自定义主题](http://element-cn.eleme.io/#/zh-CN/component/custom-theme)
 
 [element-theme](https://www.npmjs.com/package/element-theme)
+
+- 遇到的问题
+```
+当 npm run theme-init or theme-build 不成功
+需要协助 npm uninstall element-theme-chalk 
+然后 et --init ./src/lib/element-variables.scss
+然后 et
+(不通过 npm run的方式去执行)
+```
