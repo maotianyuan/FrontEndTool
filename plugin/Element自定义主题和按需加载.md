@@ -448,4 +448,5 @@ $--color-success: #667184;
 然后 et --init ./src/lib/element-variables.scss
 然后 et
 (不通过 npm run的方式去执行)
+注意踩坑⚠️： theme-variables 引入 路径是相对于 package.json的路径  @import './src/lib/element-variables.scss';
 ```
