@@ -441,12 +441,11 @@ $--color-success: #667184;
 
 [element-theme](https://www.npmjs.com/package/element-theme)
 
-- 遇到的问题
-```
+- 自定义安装老遇到问题
 当 npm run theme-init or theme-build 不成功
-需要协助 npm uninstall element-theme-chalk 
-然后 et --init ./src/lib/element-variables.scss
-然后 et
-(不通过 npm run的方式去执行)
-注意踩坑⚠️： theme-variables 引入 路径是相对于 package.json的路径  @import './src/lib/element-variables.scss';
+```
+第一：先卸载`npm uninstall element-theme-chalk`
+第二：在安装`npm install element-theme-chalk`
+第三：找到目录下element-variables.scss删除 然后重新执行`npm run theme-init`
+第四：执行 `npm run theme-build` ⚠️不要使用et，虽然npm run theme-build后面命令是et，因为package.json里面有关于element配置信息，用npm跑等于读取了里面的配置信息； package.json配置里有 "config": "./src/app/index/theme-variables.scss" ，文件里面引入了element-variables.scss, 引入这个文件的路径需要特别注意，是相对于package.json的路径，如果这个文件第一遍写错，将会导致报错，需要从第一步开始重新执行；
 ```
