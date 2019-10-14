@@ -149,7 +149,7 @@
         "through2-concurrent": "^1.1.1",
         "url-loader": "^0.5.7",
         "webpack": "^2.2.1",
-        "webpack-bundle-analyzer": "^2.2.1",
+        "webpack-bundle-analyzer": "^3.5.2",
         "webpack-dev-middleware": "^1.10.0",
         "webpack-dev-server": "^1.16.2",
         "webpack-hot-middleware": "^2.16.1",
