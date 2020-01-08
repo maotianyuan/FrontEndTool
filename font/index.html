@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    @font-face {
+        font-family: 'yourFontFamily';
+        src: url('./fonts/yourFont.eot');
+        src:
+          url('./fonts/yourFont.eot?#font-spider') format('embedded-opentype'),
+          url('./fonts/yourFont.woff') format('woff'),
+          url('./fonts/yourFont.ttf') format('truetype'),
+          url('./fonts/yourFont.svg') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      /*使用选择器指定字体*/
+      .demo {
+          font-family: 'yourFont';
+      }
+  </style>
+</head>
+<body>
+  <div class="demo">http://font-spider.org/</div>
+</body>
+</html>

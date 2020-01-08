@@ -1,0 +1,15 @@
+{
+  "name": "font",
+  "version": "1.0.0",
+  "description": "文字压缩",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "font-spider ./index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "font-spider": "^1.3.5"
+  }
+}
