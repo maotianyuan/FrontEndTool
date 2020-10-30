@@ -148,6 +148,9 @@ git commit -—amend
 > 写错的不是最新的提交，而是倒数第二个【远程未提交 push】？
 
 ```
+git rebase -i HEAD~4
+squash
+https://blog.csdn.net/yexianghu/article/details/8374064
 git rebase -i 目标commit
 
 
@@ -254,3 +257,4 @@ git remote rm origin
 ### 日志
 
 - [十个有用的 Git 日志技巧](https://hackernoon.com/ten-useful-git-log-tricks-7nt3yxy)
+
